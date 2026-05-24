@@ -1,0 +1,67 @@
+@use  'fonts';
+@use  'color';
+@use  'modern-normalize';
+@use  'layout/header';
+
+* {
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  overflow: hidden;
+  font-family: Golos-Text, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--main-color);
+  background-color: #FFFFFF;
+}
+
+body {
+  position: relative;
+  width: 100vw;
+  width: 100dvw;
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden scroll;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Merriweather;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 110%;
+}
+
+h2 {
+  font-size: 54px;
+  line-height: 120%;
+}
+
+h3 {
+  font-size: 36px;
+  line-height: 135%;
+}
+

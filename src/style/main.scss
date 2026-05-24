@@ -1,7 +1,9 @@
 @use  'fonts';
 @use  'color';
 @use  'modern-normalize';
+@use  'animations';
 @use  'layout/header';
+@use  'sections/home';
 
 * {
   user-select: none;
@@ -31,6 +33,13 @@ body {
   padding: 0 20px;
 }
 
+.page__wrapper {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  max-width: 1222px;
+}
+
 a {
   text-decoration: none;
 }
@@ -39,6 +48,29 @@ ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.button-big {
+  height: 72px;
+  width: 263px;
+  border-radius: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--anim-duration), color var(--anim-duration);
+  font-weight: 500;
+  line-height: 130%;
+  text-align: center;
+  &_type-one {
+    color: #fff;
+    background-color: var(--button-big-one-default);
+  }
+  &_type-two {
+    color: var(--button-big-two-hover);
+    border: 2px solid var(--button-big-two-hover);
+    background-color: var(--button-big-two-default);
+    box-sizing: border-box;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -65,3 +97,61 @@ h3 {
   line-height: 135%;
 }
 
+.running-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--text-highlighting);
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  width: 100dvw;
+  height: 60px;
+  font-family: Merriweather;
+  font-size: 22px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 110%;
+  white-space: nowrap;
+  color: #fff;
+  overflow: hidden;
+  z-index: 2;
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: running-line 25s linear infinite;
+  }
+  &__text {
+    position: relative;
+    padding-left: 16px;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #fff;
+    }
+  }
+}
+
+.section {
+  position: relative;
+}
+
+@media (hover: hover) {
+  .button-big {
+    &_type-one:hover {
+      background-color: var(--button-big-one-hover);
+      color: var(--button-big-one-default);
+    }
+    &_type-two:hover {
+      background-color: var(--button-big-two-hover);
+      color: #fff;
+    }
+  }
+}

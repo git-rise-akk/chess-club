@@ -1,0 +1,40 @@
+:root {
+  --anim-duration: 0.5s;
+  --anim-duration-text: 0.8s;
+}
+
+@keyframes running-line {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes movement-text-l {
+  from {
+   transform: translateX(-20%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes movement-text-r {
+  from {
+   transform: translateX(20%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

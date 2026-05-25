@@ -6,6 +6,7 @@
 @use  'sections/home';
 @use  'sections/event';
 @use  'sections/stages';
+@use  'sections/participants';
 
 * {
   user-select: none;
@@ -50,53 +51,6 @@ ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-.button-big {
-  height: 72px;
-  width: 263px;
-  border-radius: 66px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color var(--anim-duration), color var(--anim-duration);
-  font-weight: 500;
-  line-height: 130%;
-  text-align: center;
-  &_type-one {
-    color: #fff;
-    background-color: var(--button-big-one-default);
-  }
-  &_type-two {
-    color: var(--button-big-two-hover);
-    border: 2px solid var(--button-big-two-hover);
-    background-color: var(--button-big-two-default);
-    box-sizing: border-box;
-  }
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: Merriweather;
-  font-weight: normal;
-  text-transform: uppercase;
-  font-weight: 400;
-  margin: 0;
-  padding: 0;
-}
-
-h1 {
-  font-size: 60px;
-  line-height: 110%;
-}
-
-h2 {
-  font-size: 54px;
-  line-height: 120%;
-}
-
-h3 {
-  font-size: 36px;
-  line-height: 135%;
 }
 
 .running-line {
@@ -145,7 +99,140 @@ h3 {
   position: relative;
 }
 
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: var(--button-round-default);
+    transition: background-color (--anim-duration);
+    &_next {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+    &_disabled {
+      cursor: default;
+      background-color: var(--button-round-disabled);
+    }
+    svg {
+      fill: transparent;
+    }
+  }
+  &__total-elements,
+  &__separator {
+    opacity: .6;
+  }
+  &__dots {
+    display: flex;
+    gap: 6px;
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--button-round-disabled);
+      transition: background-color var(--anim-duration);
+      &_active {
+        background-color: var(--button-round-default);
+      }
+    }
+  }
+}
+
+.more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  color: var(--text-accent);
+  border: 1px solid var(--text-accent);
+  border-radius: 62px;
+  width: fit-content;
+  height: 35px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: var(--button-more-default);
+  border: 1px solid var(--button-more-hover);
+  transition: background-color var(--anim-duration), color var(--anim-duration);
+}
+
+.button-big {
+  height: 72px;
+  width: 263px;
+  border-radius: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--anim-duration), color var(--anim-duration);
+  font-weight: 500;
+  line-height: 130%;
+  text-align: center;
+  &_type-one {
+    color: #fff;
+    background-color: var(--button-big-one-default);
+  }
+  &_type-two {
+    color: var(--button-big-two-hover);
+    border: 2px solid var(--button-big-two-hover);
+    background-color: var(--button-big-two-default);
+    box-sizing: border-box;
+  }
+}
+
+.discount {
+  text-decoration-line: line-through;
+  text-decoration-color: var(--text-highlighting);
+  text-decoration-thickness: 2px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Merriweather;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 110%;
+}
+
+h2 {
+  font-size: 54px;
+  line-height: 120%;
+}
+
+h3 {
+  font-size: 36px;
+  line-height: 135%;
+}
+
+.highlighting {
+  font-weight: 700;
+  color: var(--text-highlighting);
+}
+
 @media (hover: hover) {
+  .controls__button:not(.controls__button_disabled):hover {
+    background-color: var(--button-round-hover);
+  }
+  .more:hover {
+    background-color: var(--button-more-hover);
+    color: #fff;
+  }
   .button-big {
     &_type-one:hover {
       background-color: var(--button-big-one-hover);

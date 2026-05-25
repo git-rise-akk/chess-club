@@ -108,6 +108,19 @@
         bottom: 0;
       }
     }
+    &__chess {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      max-width: none;  
+      height: auto;
+      mix-blend-mode: color-burn;
+      @include mobile {
+        width: 100%;
+        bottom: 0;
+      }
+    }
     &__pawn {
       position: absolute;
       right: 10.16%;

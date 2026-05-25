@@ -149,7 +149,7 @@
       &__line {
         display: flex;
         padding: 16px 0;
-        border-top: 2px solid #D0D0D0;
+        border-top: 2px solid var(--border-color);
         font-size: 20px;
         line-height: 120%;
         @include tablet {
@@ -183,7 +183,7 @@
           right: 0;
           width: 2px;
           height: calc(100% + 32px);
-          background: #D0D0D0;
+          background: var(--border-color);
         }
         @include tablet {
           width: 100%;

@@ -1,4 +1,5 @@
 import '../style/main.scss';
+import './init.js';
 
 fetch('/sprite.svg')
   .then(res => res.text())

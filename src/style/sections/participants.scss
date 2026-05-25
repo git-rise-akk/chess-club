@@ -4,8 +4,7 @@
   display: grid;
   grid-template-columns: auto 151px;
   grid-template-rows: auto auto;
-  grid-row-gap: 60px;
-  grid-auto-rows: auto;
+  gap: 60px 0; 
   margin: 200px 0 140px;
   @include tablet {
     grid-template-columns: 1fr;

@@ -120,7 +120,7 @@ ul {
     border: none;
     cursor: pointer;
     background-color: var(--button-round-default);
-    transition: background-color (--anim-duration);
+    transition: background-color var(--anim-duration);
     &_next {
       svg {
         transform: rotate(180deg);
@@ -168,7 +168,6 @@ ul {
   font-size: 16px;
   font-weight: 500;
   background-color: var(--button-more-default);
-  border: 1px solid var(--button-more-hover);
   transition: background-color var(--anim-duration), color var(--anim-duration);
 }
 
@@ -215,7 +214,6 @@ ul {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Merriweather;
-  font-weight: normal;
   text-transform: uppercase;
   font-weight: 400;
   margin: 0;

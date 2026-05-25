@@ -7,9 +7,12 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "sprite": "node src/scripts/build-sprite.js"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "glob": "^13.0.6",
     "sass-embedded": "^1.100.0",
     "svgstore": "^3.0.1",

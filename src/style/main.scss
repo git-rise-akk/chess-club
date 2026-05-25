@@ -1,3 +1,4 @@
+@use  'mixins'  as *;
 @use  'fonts';
 @use  'color';
 @use  'modern-normalize';
@@ -73,6 +74,10 @@ ul {
   color: #fff;
   overflow: hidden;
   z-index: 2;
+  @include mobile {
+    height: 38px;
+    font-size: 16px;
+  }
   &__inner {
     display: flex;
     align-items: center;
@@ -178,6 +183,13 @@ ul {
   font-weight: 500;
   line-height: 130%;
   text-align: center;
+  @include mobile {
+    height: 47px;
+    width: 100%;
+    br {
+      display: none;
+    }
+  }
   &_type-one {
     color: #fff;
     background-color: var(--button-big-one-default);
@@ -187,6 +199,10 @@ ul {
     border: 2px solid var(--button-big-two-hover);
     background-color: var(--button-big-two-default);
     box-sizing: border-box;
+    @include desktop {
+      border: none;
+      background-color: rgba($color: #fff, $alpha: .9);
+    }
   }
 }
 
@@ -209,16 +225,27 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 60px;
   line-height: 110%;
+  @include laptop {
+    font-size: 36px;
+    line-height: 110%;
+  }
 }
 
 h2 {
   font-size: 54px;
   line-height: 120%;
+  @include laptop {
+    font-size: 36px;
+    line-height: 110%;
+  }
 }
 
 h3 {
   font-size: 36px;
   line-height: 135%;
+  @include laptop {
+    font-size: 28px;
+  }
 }
 
 .highlighting {

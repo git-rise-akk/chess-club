@@ -1,9 +1,18 @@
+@use  '../mixins'  as *;
+
 .section_event {
   margin-top: 80px;
   .lecture-info {
     display: flex;
     align-items: center;
     gap: 64px;
+    @include laptop {
+      gap: 12px;
+    }
+    @include tablet {
+      height: 565px;
+      gap: initial;
+    }
     &__image {
       position: relative;
       width: 394px;
@@ -11,6 +20,14 @@
       height: 250px;
       border-radius: 50%;
       overflow: hidden;
+      @include tablet {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 335px;
+        min-width: 335px;
+        height: 213px;
+      }
       .img-people {
         width: 100%;
         height: auto;
@@ -30,6 +47,12 @@
       .text-part {
         display: inline;
       }
+      @include tablet {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+      }
     }
   }
   .session-info {
@@ -37,12 +60,42 @@
     display: flex;
     gap: 17px;
     margin-top: 64px;
+    @include tablet {
+      margin-top: 34px;
+      flex-direction: column;
+      gap: 24px;
+    }
     &__text {
       flex: 1;
+    }
+    &__title {
+      @include laptop {
+        width: 40%;
+        margin-left: auto;
+      }
+      @include tablet {
+        width: initial;
+        margin-left: initial;
+      }
     }
     &__image {
       position: relative;
       width: 500px;
+      @include laptop {
+        position: absolute;
+        top: 0;
+        height: 350px;
+      }
+      @include tablet {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 335px;
+        top: initial;
+        height: initial;
+        margin: 0 auto;
+      }
       .img-human {
         position: absolute;
         top: 50%;
@@ -50,6 +103,19 @@
         transform: translateY(-50%);
         width: 526px;
         height: auto;
+        @include laptop {
+          height: 100%;
+          width: auto;
+          left: 0;
+        }
+        @include tablet {
+          position: relative;
+          top: initial;
+          right: initial;
+          transform: initial;
+          height: auto;
+          width: 100%;
+        }
       }
       .img-overlay {
         position: absolute;
@@ -59,18 +125,37 @@
         max-width: none;  
         height: auto;
         mix-blend-mode: color-burn;
+        @include laptop {
+          height: 100%;
+          width: auto;
+        }
+        @include tablet {
+          height: auto;
+          width: 100%;
+          right: initial;
+        }
       }
     }
     .table {
       position: relative;
       margin-top: 60px;
       width: 100%;
+      @include laptop {
+        margin-top: 180px;
+      }
+      @include tablet {
+        margin-top: 60px;
+      }
       &__line {
         display: flex;
         padding: 16px 0;
         border-top: 2px solid #D0D0D0;
         font-size: 20px;
         line-height: 120%;
+        @include tablet {
+          flex-direction: column;
+          gap: 12px;
+        }
         &:first-child {
           padding-top: 0;
           border-top: 0;
@@ -100,6 +185,12 @@
           height: calc(100% + 32px);
           background: #D0D0D0;
         }
+        @include tablet {
+          width: 100%;
+          &::after {
+            content: none;
+          }
+        }
       }
       &__info {
         flex: 1;
@@ -108,6 +199,9 @@
         .discount {
           margin-right: 12px;
         }
+        @include tablet {
+          padding-left: 0;  
+        }
       }
     }
     &__support {
@@ -115,6 +209,9 @@
       font-size: 20px;
       line-height: 120%;
       color: var(--text-accent);
+      @include laptop {
+        font-size: 18px;
+      }
     }
   }
 }

@@ -1,7 +1,7 @@
 import '../style/main.scss';
 import './init.js';
 
-fetch('/sprite.svg')
+fetch('/chess-club/sprite.svg')
   .then(res => res.text())
   .then(svg => {
     const div = document.createElement('div');

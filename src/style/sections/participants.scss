@@ -2,15 +2,15 @@
 
 .section_participants {
   display: grid;
-  grid-template-columns: auto 151px;
+  grid-template-columns: auto rem(151);
   grid-template-rows: auto auto;
-  gap: 60px 0; 
-  margin: 200px 0 140px;
+  gap: rem(60) 0; 
+  margin: rem(200) 0 rem(140);
   @include tablet {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
-    gap: 40px 0;
-    margin: 120px 0 100px; 
+    gap: rem(40) 0;
+    margin: rem(120) 0 rem(100); 
   }
   .title {
     display: flex;
@@ -25,12 +25,12 @@
     }
     &__inner {
       display: grid;
-      grid-column-gap: 20px;
-      grid-auto-columns: calc((100% / 3) - 13px);
+      grid-column-gap: rem(20);
+      grid-auto-columns: calc((100% / 3) - rem(13));
       grid-template-rows: 1fr;
       grid-auto-flow: column;
       @include laptop {
-        grid-auto-columns: calc((100% / 2) - 10px);
+        grid-auto-columns: calc((100% / 2) - rem(10));
       }
       @include tablet {
         grid-auto-columns: 1fr;
@@ -40,9 +40,9 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: 0 37px;
+        padding: 0 rem(37);
         @include tablet {
-          width: calc(100vw - 40px);
+          width: calc(100vw - rem(40));
           padding: 0;
         }
         &__photo {
@@ -51,7 +51,7 @@
           aspect-ratio: 1 / 1;
           border-radius: 50%;
           @include tablet {
-            width: 244px;
+            width: rem(244);
           }
           img {
             width: 100%;
@@ -61,25 +61,25 @@
         &__name {
           font-family: Golos-Text, sans-serif;
           font-weight: 600;
-          font-size: 24px;
+          font-size: rem(24);
           line-height: 120%;
           text-transform: none;
-          margin: 28px 0 0;
+          margin: rem(28) 0 0;
         }
         &__desc {
-          margin: 6px 0 0;
+          margin: rem(6) 0 0;
           opacity: .6;
-          font-size: 20px;
+          font-size: rem(20);
           line-height: 120%;
         }
         .more {
-          margin-top: 20px;
+          margin-top: rem(20);
         }
       }
     }
   }
   .controls {
-    width: 151px;
+    width: rem(151);
     @include tablet {
       grid-row: 3;
       margin: 0 auto;

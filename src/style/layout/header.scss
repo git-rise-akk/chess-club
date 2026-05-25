@@ -4,34 +4,34 @@
   position: absolute;
   top: 0;
   left: 0;
-  padding: 26px 5.27% 72px;
+  padding: rem(26) 5.27% rem(72);
   width: 100%;
   display: flex;
   justify-content: center;
   z-index: 3;
   &__inner {
-    max-width: 1222px;
+    max-width: rem(1222);
     width: 100%;
     .logo {
       display: flex;
       align-items: center;
       gap: 6.35px;
       &__icon {
-        height: 31px;
-        width: 92px;
+        height: rem(31);
+        width: rem(92);
         @include tablet {
-          height: 27px;
-          width: 80px;
+          height: rem(27);
+          width: rem(80);
         }
       }
       &__name {
-        font-size: 17px;
+        font-size: rem(17);
         font-weight: 700;
         text-transform: uppercase;
         line-height: 108%;
         color: var(--text-logo);
         @include tablet {
-          font-size: 14px;
+          font-size: rem(14);
         }
       }
     }

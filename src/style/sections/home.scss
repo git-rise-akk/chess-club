@@ -2,7 +2,7 @@
 
 .section_home {
   width: 100%;
-  height: 760px;
+  height: rem(760);
   background: var(--main-bg);
 
   @include mobile {
@@ -13,15 +13,15 @@
   .collage {
     position: absolute;
     height: 100%;
-    width: 1604px;
-    bottom: 60px;
+    width: rem(1604);
+    bottom: rem(60);
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
     @include mobile {
-      width: 886px;
-      bottom: 26px;
-      right: -109px;
+      width: rem(886);
+      bottom: rem(26);
+      right: rem(-109);
       left: initial;
       transform: initial;
     }
@@ -45,42 +45,42 @@
     &__sun {
       position: absolute;
       right: 9.41%;
-      bottom: 84px;
+      bottom: rem(84);
       max-width: none;  
       height: auto;
       animation: spin 25s linear infinite;
       @include mobile {
-        width: 297px;
-        height: 297px;
-        bottom: 78px;
+        width: rem(297);
+        height: rem(297);
+        bottom: rem(78);
         right: 16.83%
       }
     }
     &__queen {
       position: absolute;
       right: 18.27%;
-      bottom: 276px;
+      bottom: rem(276);
       transform: rotate(8deg);
       max-width: none;  
       height: auto;
       @include mobile {
-        width: 47px;
+        width: rem(47);
         right: 21.44%;
-        bottom: 174px;
+        bottom: rem(174);
         transform: rotate(15deg);
       }
     }
     &__king {
       position: absolute;
       right: 39.78%;
-      bottom: 169px;
+      bottom: rem(169);
       transform: rotate(-6deg);
       max-width: none;  
       height: auto; 
       @include mobile {
-        width: 47px;
+        width: rem(47);
         right: 40.97%;
-        bottom: 122px;
+        bottom: rem(122);
       }
     }
     &__textures {
@@ -124,7 +124,7 @@
     &__pawn {
       position: absolute;
       right: 10.16%;
-      bottom: 20px;
+      bottom: rem(20);
       max-width: none;  
       height: auto;
       @include mobile {
@@ -134,23 +134,23 @@
     &__knight {
       position: absolute;
       right: 29.49%;
-      bottom: -39px;
+      bottom: rem(-39);
       transform: rotate(-11deg);
       max-width: none;  
       height: auto;
       @include mobile {
-        width: 77px;
+        width: rem(77);
         right: 28.44%;
-        bottom: -3.4px;
+        bottom: rem(-3.4);
       }
     }
   }
 
   &__content {
     position: relative;
-    padding-top: 124px;
+    padding-top: rem(124);
     z-index: 1;
-    max-width: 542px;
+    max-width: rem(542);
     box-sizing: initial;
 
     @include mobile {
@@ -170,10 +170,13 @@
         }
         &_n3 {
           animation: movement-text-l var(--anim-duration-text);
-          padding-left: 91px;
+          padding-left: rem(91);
+          @include mobile {
+            padding-left: 19%;
+          }
         }
         &_n4 {
-          padding-left: 33px;
+          padding-left: rem(33);
           animation: movement-text-r var(--anim-duration-text);
           @include mobile {
             padding-left: initial;
@@ -183,10 +186,10 @@
       }
     }
     .subtitle {
-      font-size: 18px;
+      font-size: rem(18);
       line-height: 130%;
       text-align: center;
-      margin: 24px 0 0;
+      margin: rem(24) 0 0;
 
       @include mobile {
         text-align: left;
@@ -195,19 +198,19 @@
     .links {
       display: flex;
       justify-content: space-between;
-      margin-top: 40px;
+      margin-top: rem(40);
 
       @include mobile {
         flex-direction: column;
-        gap: 14px;
-        margin-top: 32px;
+        gap: rem(14);
+        margin-top: rem(32);
       }
       
       
       .button-big {
         @include desktop {
           flex-direction: column;
-          gap: 14px;
+          gap: rem(14);
         }
       }
     }

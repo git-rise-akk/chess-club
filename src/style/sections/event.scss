@@ -1,37 +1,37 @@
 @use  '../mixins'  as *;
 
 .section_event {
-  margin-top: 80px;
+  margin-top: rem(80);
   .lecture-info {
     display: flex;
     align-items: center;
-    gap: 64px;
+    gap: rem(64);
     @include laptop {
-      gap: 12px;
+      gap: rem(12);
     }
     @include tablet {
-      height: 565px;
+      height: rem(565);
       gap: initial;
     }
     &__image {
       position: relative;
-      width: 394px;
-      min-width: 394px;
-      height: 250px;
+      width: rem(394);
+      min-width: rem(394);
+      height: rem(250);
       border-radius: 50%;
       overflow: hidden;
       @include tablet {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        width: 335px;
-        min-width: 335px;
-        height: 213px;
+        width: rem(335);
+        min-width: rem(335);
+        height: rem(213);
       }
       .img-people {
         width: 100%;
         height: auto;
-        transform: translateY(-44px);
+        transform: translateY(rem(-44));
       }
       .img-overlay {
         position: absolute;
@@ -58,12 +58,12 @@
   .session-info {
     position: relative;
     display: flex;
-    gap: 17px;
-    margin-top: 64px;
+    gap: rem(17);
+    margin-top: rem(64);
     @include tablet {
-      margin-top: 34px;
+      margin-top: rem(34);
       flex-direction: column;
-      gap: 24px;
+      gap: rem(24);
     }
     &__text {
       flex: 1;
@@ -80,18 +80,18 @@
     }
     &__image {
       position: relative;
-      width: 500px;
+      width: rem(500);
       @include laptop {
         position: absolute;
         top: 0;
-        height: 350px;
+        height: rem(350);
       }
       @include tablet {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 335px;
+        width: rem(335);
         top: initial;
         height: initial;
         margin: 0 auto;
@@ -101,7 +101,7 @@
         top: 50%;
         right: 0;
         transform: translateY(-50%);
-        width: 526px;
+        width: rem(526);
         height: auto;
         @include laptop {
           height: 100%;
@@ -138,37 +138,37 @@
     }
     .table {
       position: relative;
-      margin-top: 60px;
+      margin-top: rem(60);
       width: 100%;
       @include laptop {
-        margin-top: 180px;
+        margin-top: rem(180);
       }
       @include tablet {
-        margin-top: 60px;
+        margin-top: rem(60);
       }
       &__line {
         display: flex;
-        padding: 16px 0;
+        padding: rem(16) 0;
         border-top: 2px solid var(--border-color);
-        font-size: 20px;
+        font-size: rem(20);
         line-height: 120%;
         @include tablet {
           flex-direction: column;
-          gap: 12px;
+          gap: rem(12);
         }
         &:first-child {
           padding-top: 0;
           border-top: 0;
           .table__header::after {
             top: 0;
-            height: calc(100% + 16px);
+            height: calc(100% + rem(16));
           }
         }
         &:last-child {
           padding-bottom: 0;
           .table__header::after {
-            top: -16px;
-            height: calc(100% + 16px);
+            top: rem(-16);
+            height: calc(100% + rem(16));
           }
         }
       }
@@ -179,11 +179,11 @@
         &::after {
           content: '';
           position: absolute;
-          top: -16px;
+          top: rem(-16);
           right: 0;
           width: 2px;
-          height: calc(100% + 32px);
-          background: var(--border-color);
+          height: calc(100% + rem(32));
+          background: #D0D0D0;
         }
         @include tablet {
           width: 100%;
@@ -195,9 +195,9 @@
       &__info {
         flex: 1;
         font-weight: 600;
-        padding-left: 16px;
+        padding-left: rem(16);
         .discount {
-          margin-right: 12px;
+          margin-right: rem(12);
         }
         @include tablet {
           padding-left: 0;  
@@ -205,12 +205,12 @@
       }
     }
     &__support {
-      margin-top: 48px;
-      font-size: 20px;
+      margin-top: rem(48);
+      font-size: rem(20);
       line-height: 120%;
       color: var(--text-accent);
       @include laptop {
-        font-size: 18px;
+        font-size: rem(18);
       }
     }
   }

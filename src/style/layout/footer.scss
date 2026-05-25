@@ -2,12 +2,12 @@
 
 .footer {
   position: relative;
-  padding: 100px 0 72px;
+  padding: rem(100) 0 rem(72);
   width: 100%;
   display: flex;
   justify-content: center;
   @include tablet {
-    padding: 78px 0 60px;
+    padding: rem(78) 0 rem(60);
   }
   &::before {
     content: '';
@@ -25,7 +25,7 @@
   }
   &__text {
     width: 100%;
-    max-width: 1222px;
+    max-width: rem(1222);
     font-weight: 400;
     line-height: 120%;
     opacity: .6;

@@ -1,9 +1,9 @@
 @use  '../mixins'  as *;
 
 .section_stages {
-  margin-top: 200px;
+  margin-top: rem(200);
   @include tablet {
-    margin-top: 120px;  
+    margin-top: rem(120);  
   }
   .title {
     &__wrapper-subtitle {
@@ -13,18 +13,18 @@
     &__subtitle {
       position: absolute;
       display: block;
-      bottom: 10px;
+      bottom: rem(10);
       left: 100%;
-      width: 280px;
-      margin-left: 21px;
+      width: rem(280);
+      margin-left: rem(21);
       font-family: Golos-Text, sans-serif;
-      font-size: 20px;
+      font-size: rem(20);
       color: var(--text-accent);
       font-weight: 400;
       text-transform: none;
       line-height: 120%;
       @include laptop {
-        font-size: 18px;
+        font-size: rem(18);
         bottom: 2px;
       }
       @include tablet {
@@ -32,42 +32,42 @@
         bottom: initial;
         left: initial;
         width: 100%;
-        margin: 12px 0 0;
+        margin: rem(12) 0 0;
       }
     }
   }
   .stages {
     position: relative;
-    margin-top: 54px;
+    margin-top: rem(54);
     @include desktop {
-      margin-top: 55px;
-      padding-top: 93px;
+      margin-top: rem(55);
+      padding-top: rem(93);
     }
     &__inner {
       position: relative;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(3, 1fr);
-      gap: 20px;
+      gap: rem(20);
       width: 100%;
-      height: 400px;
+      height: rem(400);
       will-change: transform, mix-blend-mode;
       @include desktop {
-        height: 300px;
+        height: rem(300);
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;
-        gap: 20px;
+        gap: rem(20);
       }
       @include tablet {
         display: flex;
-        height: 300px;
+        height: rem(300);
       }
     }
     &__item {
       position: relative;
       display: flex;
-      gap: 20px;
+      gap: rem(20);
       &:first-child {
         grid-area: 1 / 1 / 2 / 3;
       }
@@ -80,15 +80,15 @@
       &:last-child {
         grid-area: 3 / 2 / 4 / 4;
         .stage__text {
-          width: 446px;
+          width: rem(446);
         }
       }
       @include desktop {
         flex-direction: column;
-        flex: 0 0 calc((100% - (20px * 2)) / 3); 
-        max-width: calc((100% - (20px * 2)) / 3);
-        padding: 62px 24px 34px 20px;
-        gap: 28px;
+        flex: 0 0 calc((100% - (rem(20) * 2)) / 3); 
+        max-width: calc((100% - (rem(20) * 2)) / 3);
+        padding: rem(62) rem(24) rem(34) rem(20);
+        gap: rem(28);
         &::before {
           content: '';
           position: absolute;
@@ -117,8 +117,8 @@
         }
       }
       @include laptop {
-        flex: 0 0 calc((100% - 20px) / 2);
-        max-width: calc((100% - 20px) / 2);
+        flex: 0 0 calc((100% - rem(20)) / 2);
+        max-width: calc((100% - rem(20)) / 2);
       }
       @include tablet {
         min-width: 100%;
@@ -127,17 +127,17 @@
     }
     &__img-plane {
       position: absolute;
-      right: -51px;
-      bottom: 45px;
+      right: rem(-51);
+      bottom: rem(45);
       padding: 0;
       transform: rotate(-15deg);
       @include desktop {
         bottom: initial;
         top: 0;
         transform: rotate(-19deg);
-        width: 318px;
+        width: rem(318);
         right: initial;
-        left: 18px;
+        left: rem(18);
       }
       &::after {
         content: none;
@@ -147,20 +147,20 @@
       }
     }
     .controls {
-      margin-top: 28px;
+      margin-top: rem(28);
       display: none;
       justify-content: center;
-      gap: 16px;
+      gap: rem(16);
       @include desktop {
         display: flex;
       }
     }
     .stage {
       position: relative;
-      padding: 20px;
+      padding: rem(20);
       box-sizing: border-box;
       display: flex;
-      gap: 16px;
+      gap: rem(16);
       flex: 1;
       &::before {
         content: '';
@@ -192,7 +192,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 36px;
+        height: rem(36);
         aspect-ratio: 1/1;
         border-radius: 50%;
         background: #fff;
@@ -200,12 +200,12 @@
         z-index: 1;
       }
       &__text {
-        font-size: 20px;
+        font-size: rem(20);
         font-weight: 500;
         line-height: 120%;
         z-index: 1;
         @include desktop {
-          font-size: 18px;
+          font-size: rem(18);
         }
       }
       @include desktop {

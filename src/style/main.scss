@@ -35,14 +35,14 @@ body {
   flex-direction: column;
   align-items: center;
   overflow: hidden scroll;
-  padding: 0 20px;
+  padding: 0 rem(20);
 }
 
 .page__wrapper {
   position: relative;
   width: 100%;
   height: fit-content;
-  max-width: 1222px;
+  max-width: rem(1222);
 }
 
 a {
@@ -64,9 +64,9 @@ ul {
   align-items: center;
   width: 100vw;
   width: 100dvw;
-  height: 60px;
+  height: rem(60);
   font-family: Merriweather;
-  font-size: 22px;
+  font-size: rem(22);
   font-weight: 400;
   text-transform: uppercase;
   line-height: 110%;
@@ -75,26 +75,26 @@ ul {
   overflow: hidden;
   z-index: 2;
   @include mobile {
-    height: 38px;
-    font-size: 16px;
+    height: rem(38);
+    font-size: rem(16);
   }
   &__inner {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: rem(12);
     animation: running-line 25s linear infinite;
   }
   &__text {
     position: relative;
-    padding-left: 16px;
+    padding-left: rem(16);
     &::after {
       content: '';
       position: absolute;
       top: 50%;
       left: 0;
       transform: translateY(-50%);
-      width: 6px;
-      height: 6px;
+      width: rem(6);
+      height: rem(6);
       border-radius: 50%;
       background: #fff;
     }
@@ -113,9 +113,9 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 44px;
-    min-width: 44px;
-    height: 44px;
+    width: rem(44);
+    min-width: rem(44);
+    height: rem(44);
     border-radius: 50%;
     border: none;
     cursor: pointer;
@@ -140,10 +140,10 @@ ul {
   }
   &__dots {
     display: flex;
-    gap: 6px;
+    gap: rem(6);
     .dot {
-      width: 10px;
-      height: 10px;
+      width: rem(10);
+      height: rem(10);
       border-radius: 50%;
       background-color: var(--button-round-disabled);
       transition: background-color var(--anim-duration);
@@ -158,23 +158,23 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 12px;
+  padding: 0 rem(12);
   color: var(--text-accent);
   border: 1px solid var(--text-accent);
-  border-radius: 62px;
+  border-radius: rem(62);
   width: fit-content;
-  height: 35px;
+  height: rem(35);
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: rem(16);
   font-weight: 500;
   background-color: var(--button-more-default);
   transition: background-color var(--anim-duration), color var(--anim-duration);
 }
 
 .button-big {
-  height: 72px;
-  width: 263px;
-  border-radius: 66px;
+  height: rem(72);
+  width: rem(263);
+  border-radius: rem(66);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -183,7 +183,7 @@ ul {
   line-height: 130%;
   text-align: center;
   @include mobile {
-    height: 47px;
+    height: rem(47);
     width: 100%;
     br {
       display: none;
@@ -221,28 +221,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 60px;
+  font-size: rem(60);
   line-height: 110%;
   @include laptop {
-    font-size: 36px;
+    font-size: rem(36);
     line-height: 110%;
   }
 }
 
 h2 {
-  font-size: 54px;
+  font-size: rem(54);
   line-height: 120%;
   @include laptop {
-    font-size: 36px;
+    font-size: rem(36);
     line-height: 110%;
   }
 }
 
 h3 {
-  font-size: 36px;
+  font-size: rem(36);
   line-height: 135%;
   @include laptop {
-    font-size: 28px;
+    font-size: rem(28);
   }
 }
 
